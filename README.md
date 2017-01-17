@@ -1,0 +1,2 @@
+# Tietorakenteet_ja_algoritmit
+Tietorakenne ja algoritmikurssin testiohjelma
