@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="ikkunanLeveysTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan leveys (L):" VerticalAlignment="Top" Margin="1119,240,0,0"/>
+        <TextBlock x:Name="ikkunanKorkeusTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan korkeus (H):" VerticalAlignment="Top" Margin="1119,301,0,0"/>
+        <TextBlock x:Name="puunLeveysTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Karmipuun leveys (W):" VerticalAlignment="Top" Margin="1119,370,0,0"/>
+        <TextBlock x:Name="ikkunanPintaAlaTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan pinta-ala:" VerticalAlignment="Top" Margin="1119,433,0,0"/>
+        <TextBlock x:Name="lasinPintaAlaTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Lasin pinta-ala:" VerticalAlignment="Top" Margin="1119,489,0,0"/>
+        <TextBlock x:Name="karminPiiriTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Karmin piiri:" VerticalAlignment="Top" Margin="1119,558,0,0"/>
+        <Button x:Name="laskeButton" Content="Laske" HorizontalAlignment="Left" Margin="1506,397,0,0" VerticalAlignment="Top" Click="laskeButton_Click"/>
+        <TextBox x:Name="ikkunanLeveysTextBox" HorizontalAlignment="Left" Margin="1365,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="ikkunanLeveysTextBox_TextChanged"/>
+        <TextBox x:Name="ikkunanKorkeusTextBox" HorizontalAlignment="Left" Margin="1365,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="ikkunanKorkeusTextBox_TextChanged"/>
+        <TextBox x:Name="puunLeveysTextBox" HorizontalAlignment="Left" Margin="1365,358,0,0" TextWrapping="Wrap" Text="45" VerticalAlignment="Top" TextChanged="puunLeveysTextBox_TextChanged"/>
+        <TextBox x:Name="ikkunanPintaAlaTextBox" HorizontalAlignment="Left" Margin="1365,433,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="lasinPintaAlaTextBox" HorizontalAlignment="Left" Margin="1365,489,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="karminPiiriTextBox" HorizontalAlignment="Left" Margin="1365,558,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Image Height="291" Width="578" Source="D:\K2365\UWP\UWP\window.png" Margin="479,287,863,502" />
 
     </Grid>
 </Page>
