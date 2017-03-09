@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="t2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:t2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Background="LightYellow" Grid.Column="0" Margin="10, 10, 0, 0">
+                <TextBlock x:Name="firstTextBlock" FontSize="30" Margin="0,10,10,10">Employee basic information</TextBlock>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock x:Name="nameTextBlock" FontSize="30" Width="150">Name:</TextBlock>
+                    <TextBox x:Name="nameTextBox" FontSize="30" Width="200" Margin="0, 0, 0, 10"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock x:Name="emailTextBlock" FontSize="30" Width="150">Email:</TextBlock>
+                    <TextBox x:Name="emailTextBox" FontSize="30" Width="200" Margin="0, 0, 0, 10"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock x:Name="pwTextBlock" FontSize="30" Width="150">Password:</TextBlock>
+                    <PasswordBox x:Name="pwBox" FontSize="30" Width="200"></PasswordBox>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="userlevelTextBlock" FontSize="30" Margin="0,20,0,0">User Level:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="userCheckBox" FontSize="20" Content="Normal user"/>
+                        <CheckBox x:Name="adminCheckBox" FontSize="20" Margin="10,0,0,0" Content="Admin user"/>
+                    </StackPanel>
+                    <Button x:Name="saveButton" FontSize="30" Margin="30" Click="saveButton_Click">Save</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Background="LightYellow" Grid.Column="1" Margin="0, 10, 10, 0" Orientation="Vertical">
+                <TextBlock x:Name="secondTextBlock" FontSize="30" Margin="10,10,10,10">Image:</TextBlock>
+                <Image x:Name="image" Height="100" Width="70" HorizontalAlignment="Left" Margin="20" Source="Assets/employee01.png"/>
+                <Button x:Name="browseButton" FontSize="30" Content="Browse" Margin="10"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
