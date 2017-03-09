@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="t4.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:t4"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="640"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <RelativePanel Grid.Column="1">
+                <TextBox x:Name="valueTextBox" Margin="70,50,0,00" Width="500" Height="75"/>
+                <Button x:Name="button7" Width="90" Height="65" Margin="70,150,0,0" Content="7"/>
+                <Button x:Name="button8" Width="90" Height="65" RelativePanel.RightOf="button7" RelativePanel.Below="valueTextBox" Margin="45,25,0,0" Content="8"/>
+                <Button x:Name="button9" Width="90" Height="65" RelativePanel.RightOf="button8" RelativePanel.Below="valueTextBox" Margin="45,25,0,0" Content="9"/>
+                <Button x:Name="buttonBack" Width="90" Height="65" RelativePanel.RightOf="button9" RelativePanel.Below="valueTextBox" Margin="50,25,-5,0" Content="&lt;-"/>
+                <Button x:Name="button4" Width="90" Height="65" Margin="70,240,0,0" Content="4"/>
+                <Button x:Name="button5" Width="90" Height="65" RelativePanel.RightOf="button4" RelativePanel.Below="button8" Margin="45,25,0,0" Content="5"/>
+                <Button x:Name="button6" Width="90" Height="65" RelativePanel.RightOf="button5" RelativePanel.Below="button9" Margin="45,25,0,0" Content="6"/>
+                <Button x:Name="buttonOk" Width="90" Height="255" RelativePanel.RightOf="button6" RelativePanel.Below="buttonBack" Margin="50,25,-5,0" Content="ok"/>
+                <Button x:Name="button1" Width="90" Height="65" Margin="70,330,0,0" Content="1"/>
+                <Button x:Name="button2" Width="90" Height="65" RelativePanel.RightOf="button1" RelativePanel.Below="button5" Margin="45,25,0,0" Content="2"/>
+                <Button x:Name="button3" Width="90" Height="65" RelativePanel.RightOf="button2" RelativePanel.Below="button6" Margin="45,25,0,0" Content="3"/>
+                <Button x:Name="button0" Width="225" Height="65" Margin="70,420,0,0" Content="0"/>
+                <Button x:Name="button." Width="90" Height="65" RelativePanel.RightOf="button0" RelativePanel.Below="button3" Margin="45,25,0,0" Content="."/>
+            </RelativePanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <CheckBox Margin="100, 340, 0, 0" Content="Temperature"/>
+                <CheckBox Margin="80, 340, 0, 0" Content="Humidity"/>
+            </StackPanel>
+            <TextBlock x:Name="infoTextBlock" Text="Info: Set values and click ok!" Grid.Column="1" Margin="70,560,0,0"/>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock x:Name="tempTextBlock" Text="Temperature:" Grid.Column="0" FontSize="50" Foreground="Lime" FontStyle="Italic" Margin="80,300,0,0" />
+                    <TextBlock x:Name="tempTextBox" Text="102.34" Margin="90,310,0,0" FontSize="45" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="humidTextBlock" Text="Humidity:" Grid.Column="0" FontSize="50" Foreground="Lime" FontStyle="Italic" Margin="80,0,0,0" />
+                    <TextBlock x:Name="humidTextBox" Text="123.96" Margin="166,10,0,0" FontSize="45" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
