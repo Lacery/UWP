@@ -25,7 +25,6 @@
                 </StackPanel>
                 <TextBlock x:Name="secondTextBlock" FontSize="40" Margin="60,40,0,0" Text="Random numbers:"/>
                 <ScrollViewer x:Name="scrollViewer" FontSize="40" Margin="60,50,0,0" Width="1000" Height="250" HorizontalAlignment="Left">
-                    <TextBlock x:Name="randomNumbersTextBlock" Text="0"/>
                 </ScrollViewer>
             </StackPanel>
 

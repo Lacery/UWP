@@ -30,30 +30,49 @@ namespace t3
         private void drawButton_Click(object sender, RoutedEventArgs e)
         {
             Lotto lotto = new Lotto();
-            List<int> lista = lotto.makeLines(Int32.Parse(drawTextBox.Text));
-            randomNumbersTextBlock.Text = lista.ToString();
+            TextBox LottoBox = new TextBox(); //Luo TextBoxin scrollViewerin sisalle
+            LottoBox.AcceptsReturn = true;
+            for (int i = 1; i <= int.Parse(drawTextBox.Text); i++) 
+            {
+                int[] numerot = lotto.makeLines(); //Luo uuden rivin
+                foreach (int s in numerot) 
+                {
+                    LottoBox.Text += s.ToString() + " "; //Lisaa rivin scrollViewerin sisalle
+
+                }
+                LottoBox.Text += Environment.NewLine;
+
+
+                scrollViewer.Content = (LottoBox);
+            }
 
         }
 
-        private void clearButton_Click(object sender, RoutedEventArgs e)
+        private void clearButton_Click(object sender, RoutedEventArgs e) 
         {
-            randomNumbersTextBlock.Text = "";
+            scrollViewer.Content = ""; //Tyhjentaa scrollViewerin
         }
     }
 
     class Lotto
     {
-        public List<int> lista = new List<int>();
 
-        public List<int> makeLines(int lineAmount)
+        Random rand = new Random();
+
+        public int[] makeLines() //Luo lottorivin
         {
-            for (int i = 0; i <= lineAmount-1; i++)
+            int[] lotto = new int[7];
+            int check = 0;
+            for (int i = 0; i < lotto.Length;)
             {
-                Random rand = new Random();
-                int number = rand.Next(1, 39 + 1);
-                lista.Add(number);
+                check = rand.Next(1, 41);
+                while (!(lotto.Contains(check))) //Tarkistaa ettei tule samaa numeroa uudestaan
+                {
+                    lotto[i] = check;
+                    i++;
+                }
             }
-            return lista;
+            return lotto;
         }
         
 
