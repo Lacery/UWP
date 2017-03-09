@@ -1,2 +1,3 @@
-# Tietorakenteet_ja_algoritmit
-Tietorakenne ja algoritmikurssin testiohjelma
+# UWP
+# TTOS0200 -kurssille tehtyjä UWP-sovelluksia
+
