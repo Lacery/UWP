@@ -30,7 +30,7 @@ namespace t4
         private void button_Click(object sender, RoutedEventArgs e)
         {
             double value = double.Parse(valueTextBox.Text);
-            if (value == 0) //Jos valueTextBoxissa on 0, tyhjennetaan se >>>> HOX! Jos value on "" eli tyhja, ei toimi -> Tehtava jokin saanto
+            if (value == 0) //Jos valueTextBoxissa on 0, tyhjennetaan se ennen uutta numeroa
             {
                 valueTextBox.Text = "";
             }
@@ -42,7 +42,14 @@ namespace t4
         {
             string value = valueTextBox.Text;
             value = value.Remove(value.Length - 1);
-            valueTextBox.Text = value;
+            if (value.Length == 0) //Jos valueTextBox tyhjennetaan kokonaan, laitetaan siihen taas 0
+            {
+                valueTextBox.Text = "0";
+            }
+            else
+            {
+                valueTextBox.Text = value;
+            }
         }
 
         private void buttonOk_Click(object sender, RoutedEventArgs e)
@@ -68,6 +75,7 @@ namespace t4
                     infoTextBlock.Text = "Info: Invalid value. Humidity must be 0-100";
                 }
             }
+            
 
 
         }
