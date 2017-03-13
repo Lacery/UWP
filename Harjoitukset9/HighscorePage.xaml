@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="Harjoitukset9.HighscorePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset9"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="highscorePageTextBlock" Text="HighscorePage" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+        <Button x:Name="highscorePageBackButton" Content="Back" Margin="50" Click="highscorePageBackButton_Click" />
+    </Grid>
+</Page>

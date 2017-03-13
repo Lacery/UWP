@@ -17,7 +17,7 @@
             <StackPanel Background="BurlyWood" Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock x:Name="firstTextBlock" FontSize="40" Margin="60,140,0,0" Text="Number of draws:"/>
-                    <TextBox x:Name="drawTextBox" Width="200" Height="50" Margin="350, 140, 0 ,0"/>
+                    <TextBox x:Name="drawTextBox" Width="200" Height="50" Margin="350, 140, 0 ,0" FontSize="30"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" >
                     <Button x:Name="drawButton" FontSize="40" Content="Draw" Margin="180, 40, 0, 0" Click="drawButton_Click"/>

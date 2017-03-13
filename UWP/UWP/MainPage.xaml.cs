@@ -32,6 +32,7 @@ namespace t3
             Lotto lotto = new Lotto();
             TextBox LottoBox = new TextBox(); //Luo TextBoxin scrollViewerin sisalle
             LottoBox.AcceptsReturn = true;
+            LottoBox.FontSize = 30;
             for (int i = 1; i <= int.Parse(drawTextBox.Text); i++) 
             {
                 int[] numerot = lotto.makeLines(); //Luo uuden rivin

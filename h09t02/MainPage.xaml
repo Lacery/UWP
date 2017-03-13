@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="h09t02.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:h09t02"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBlock x:Name="firstnameTextBlock" Text="Enter your firstname:" FontSize="40" HorizontalAlignment="Center" />
+            <TextBox x:Name="firstnameTextBox" FontSize="40" Text="" HorizontalAlignment="Center" Width="450"/>
+            <TextBlock x:Name="lastnameTextBlock" Text="Enter your lastname:" FontSize="40" HorizontalAlignment="Center" />
+            <TextBox x:Name="lastnameTextBox" FontSize="40" Text="" HorizontalAlignment="Center" Width="450"/>
+            <HyperlinkButton x:Name="nextpageHyperlinkButton" Content="Go to page 2" HorizontalAlignment="Center" FontSize="35" Click="nextpageHyperlinkButton_Click"/>
+            <TextBlock x:Name="randomNumberTextBlock" HorizontalAlignment="Center" FontSize="40" />
+
+        </StackPanel>
+    </Grid>
+</Page>
